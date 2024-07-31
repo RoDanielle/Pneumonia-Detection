@@ -54,12 +54,21 @@ The trained models used for this project are included as a link to a Google Driv
 
 ### Results and preformance examples
  
+  Confusion Matrix - Test Set A1 - binary class classification
+
  ![Confusion Matrix - Test Set A1 - binary class classification](Example_images/A1_testset_confusion_matrix.jpg)
+
+  Confusion Matrix - Test Set A2 - multi class classification
 
  ![Confusion Matrix - Test Set A2 - multi class classification](Example_images/A2_testset_confusion_matrix.jpg)
 
+  Binary t-SNE Visualization
+
  ![Binary t-SNE Visualization](Example_images/B_Binary_t-SNE.jpg)
 
+  Multi-Class t-SNE Visualization
  ![Multi-Class t-SNE Visualization](Example_images/B_Multi_Class_t-SNE.jpg)
 
+  Original and Reconstructed images from anomaly detection
+  
  ![Original and Reconstructed images from anomaly detection](Example_images/D_Reconstructed_Detection.jpg)
