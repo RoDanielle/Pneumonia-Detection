@@ -67,8 +67,9 @@ The trained models used for this project are included as a link to a Google Driv
  ![Binary t-SNE Visualization](Example_images/B_Binary_t-SNE.jpg)
 
   Multi-Class t-SNE Visualization
+  
  ![Multi-Class t-SNE Visualization](Example_images/B_Multi_Class_t-SNE.jpg)
 
   Original and Reconstructed images from anomaly detection
-  
+
  ![Original and Reconstructed images from anomaly detection](Example_images/D_Reconstructed_Detection.jpg)
