@@ -1,13 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-**Authors:**
+**Author:**
 
 *   Danielle Rotem
-
-*   Shahar Loantz
-
-*   Yuval Hajbi
-
 
 **Description**:
 
@@ -15,7 +10,8 @@ Testing notebook for pneumonia detection using chest x ray project.
 
 **User guide:**
 
-copy into your Google Drive root directory the folder "models_and_weights" from the shared folder : https://drive.google.com/drive/folders/1EIkepDGTZes43p2omPLophCPT3GPlYL_?usp=sharing
+Please copy the folder named 'models_and_weights,' which contains the trained models, into the root directory of your Google Drive. 
+You can access the folder through this link: https://drive.google.com/drive/folders/1EIkepDGTZes43p2omPLophCPT3GPlYL_?usp=sharing
 
 Please follow each assignment guide in order to run its test.
 
