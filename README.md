@@ -1,4 +1,4 @@
-# Pneumonia-Detection
+# Pneumonia Detection
 
 ## Introduction
 
@@ -10,66 +10,138 @@ A deep convolutional neural network (CNN) is a type of artificial neural network
 
 ### Dataset Distribution
 
-- **Total Images**: 5863 JPEG Chest X-ray images.
-
+- **Total Images**: 5863 JPEG chest X-ray images.
 - **Categories**: 
   - Bacterial Pneumonia
   - Viral Pneumonia
   - Normal
-
-**Dataset Source**: The dataset is available on Kaggle. Get it [here](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).
+- **Data Split for Traning**:
+   - train: 4183 (Viral Pneumonia - 1131, Bacterial Pneumonia - 1979, Normal - 1073)
+   - val: 1043 (Viral Pneumonia - 216, Bacterial Pneumonia - 559, Normal - 268)
+   - test: 624 (Viral Pneumonia - 148, Bacterial Pneumonia - 242, Normal - 234)
 
 ### How to Use
 
 In the project's files, you can find:
 
 1. **Google Colab Notebooks** (inside the `notebooks` folder):
-   - **Pneumonia_Detection_Testing.ipynb**: Provides an image as input and gets a prediction output.
-   - **Pneumonia_Detection_Training.ipynb**: Contains details about the training process.
+   - **Pneumonia_Detection_Testing.ipynb**: 
+     - This notebook allows you to input an image and receive a prediction output.
+     - **How to Run**:
+       - Open the notebook in Google Colab, follow the instructions in the notebook, and run the cells sequentially. Upload your chest X-ray images when prompted.
+
+   - **Pneumonia_Detection_Training.ipynb**: 
+     - This notebook contains details about the training process, including data preprocessing, model architecture, training, and evaluation.
+     - **How to Set Up the Dataset for Training**:
+       - Download the dataset from Kaggle. You can find it [here](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).
+       - Extract the downloaded files and rename the "chest_xray" folder to "all_the_images".
+       - Create a new folder named `project_ML` in `/content/drive/MyDrive/`.
+       - Upload the "all_the_images" folder into the `project_ML` folder in your Google Drive.
+
+         You should have the following structure:
+
+         ```
+         content
+         └── drive
+             └── MyDrive
+                 └── project_ML/
+                     └── all_the_images/
+                        ├── train/
+                        │   ├── NORMAL/
+                        │   │   ├── image1.jpg
+                        │   │   ├── image2.jpg
+                        │   │   └── ...
+                        │   └── PNEUMONIA/
+                        │       ├── image1.jpg
+                        │       ├── image2.jpg
+                        │       └── ...
+                        ├── val/
+                        │   ├── NORMAL/
+                        │   │   ├── image1.jpg
+                        │   │   ├── image2.jpg
+                        │   │   └── ...
+                        │   └── PNEUMONIA/
+                        │       ├── image1.jpg
+                        │       ├── image2.jpg
+                        │       └── ...
+                        └── test/
+                            ├── NORMAL/
+                            │   ├── image1.jpg
+                            │   ├── image2.jpg
+                            │   └── ...
+                            └── PNEUMONIA/
+                                ├── image1.jpg
+                                ├── image2.jpg
+                                └── ...
+  
+       - **Note**: The original dataset is not split properly; for training, I resplit the train and validation sets to 80% train and 20% val. You can split the data however you like, but please maintain the folder structure.
+
+     - **How to Run**: 
+         1. Open the notebook in Google Colab.
+         2. Run every cell in order.
+         3. After running all the cells, you should have the trained models in the "models_and_weights" folder, structured as follows:
+
+         ```
+         content
+         └── drive
+             └── MyDrive
+                └── project_ML/
+                   └── models_and_weights/
+                      ├── A1/
+                      │   ├── model.keras
+                      │   └── weights.model.keras
+                      ├── A2/
+                      │   ├── model.keras
+                      │   └── weights.model.keras
+                      ├── B/
+                      │   ├── binary/
+                      │   │   └── knn_classifier.pkl
+                      │   └── multiclass/
+                      │       └── knn_classifier.pkl
+                      └── D/
+                          ├── model.keras
+                          ├── weights.model.keras
+                          └── threshold.txt
+         ```
 
 2. **Python Scripts** (inside the `scripts` folder):
-   - **pneumonia_detection_testing.py**: Python script version of the testing notebook.
-   - **pneumonia_detection_training.py**: Python script version of the training notebook.
-
-Both notebooks and scripts include a step-by-step guide on how to use them.
+   - **pneumonia_detection_testing.py**
+   - **pneumonia_detection_training.py**
+   These files are in Python format for your convenience.
 
 ### Models
 
 This project includes several models for pneumonia detection and classification:
 
-1. Binary Classification Model: Classifies images as either Normal or Pneumonia.
-
-2. Multi-Class Classification Model: Classifies images into one of three categories: Bacterial Pneumonia, Viral Pneumonia, or Normal.
-
-3. KNN-based Classification:
-
-    - Binary Model: Classifies new images based on the binary classification model using KNN.
-    - Multi-Class Model: Classifies new images based on the multi-class classification model using KNN.
-
-4. Anomaly Detection Model: Uses an autoencoder to detect anomalies in the images.
+1. **Binary Classification Model**: Classifies images as either Normal or Pneumonia.
+2. **Multi-Class Classification Model**: Classifies images into one of three categories: Bacterial Pneumonia, Viral Pneumonia, or Normal.
+3. **KNN-based Classification**:
+   - **Binary Model**: Classifies new images based on the binary classification model using KNN.
+   - **Multi-Class Model**: Classifies new images based on the multi-class classification model using KNN.
+4. **Anomaly Detection Model**: Uses an autoencoder to detect anomalies in the images.
 
 ### Trained Models
 
 The trained models used for this project are included as a link to a Google Drive folder in the test notebook. You can use these models directly without retraining.
 
-### Results and preformance examples
+### Results and Performance Examples
  
-  Confusion Matrix - Test Set A1 - binary class classification
+**Confusion Matrix - Test Set A1 - Binary Class Classification**
 
- ![Confusion Matrix - Test Set A1 - binary class classification](Example_images/A1_testset_confusion_matrix.jpg)
+![Confusion Matrix - Test Set A1 - Binary Class Classification](Example_images/A1_testset_confusion_matrix.jpg)
 
-  Confusion Matrix - Test Set A2 - multi class classification
+**Confusion Matrix - Test Set A2 - Multi-Class Classification**
 
- ![Confusion Matrix - Test Set A2 - multi class classification](Example_images/A2_testset_confusion_matrix.jpg)
+![Confusion Matrix - Test Set A2 - Multi-Class Classification](Example_images/A2_testset_confusion_matrix.jpg)
 
-  Binary t-SNE Visualization
+**Binary t-SNE Visualization**
 
- ![Binary t-SNE Visualization](Example_images/B_Binary_t-SNE.jpg)
+![Binary t-SNE Visualization](Example_images/B_Binary_t-SNE.jpg)
 
-  Multi-Class t-SNE Visualization
+**Multi-Class t-SNE Visualization**
   
- ![Multi-Class t-SNE Visualization](Example_images/B_Multi_Class_t-SNE.jpg)
+![Multi-Class t-SNE Visualization](Example_images/B_Multi_Class_t-SNE.jpg)
 
-  Original and Reconstructed images from anomaly detection
+**Original and Reconstructed Images from Anomaly Detection**
 
- ![Original and Reconstructed images from anomaly detection](Example_images/D_Reconstructed_Detection.jpg)
+![Original and Reconstructed Images from Anomaly Detection](Example_images/D_Reconstructed_Detection.jpg)
