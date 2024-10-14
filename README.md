@@ -34,6 +34,7 @@ In the project's files, you can find:
    - **Pneumonia_Detection_Training.ipynb**: 
      - This notebook contains details about the training process, including data preprocessing, model architecture, training, and evaluation.
      - **How to Set Up the Dataset for Training**:
+       - Open and save a copy of the Google Colab notebook in your Google Drive.
        - Download the dataset from Kaggle. You can find it [here](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).
        - Extract the downloaded files and rename the `chest_xray` folder to `all_the_images`.
        - Create a new folder named `project_ML` in `/content/drive/MyDrive/`.
