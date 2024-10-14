@@ -26,9 +26,10 @@ In the project's files, you can find:
 
 1. **Google Colab Notebooks** (inside the `notebooks` folder):
    - **Pneumonia_Detection_Testing.ipynb**: 
-     - This notebook allows you to input an image and receive a prediction output.
+     - This notebook allows you to insert an image and receive a prediction.
      - **How to Run**:
-       - Open the notebook in Google Colab, follow the instructions in the notebook, and run the cells sequentially. Upload your chest X-ray images when prompted.
+       - Open the notebook in Google Colab, follow the instructions in the notebook, and run the cells sequentially. 
+         Upload your chest X-ray images when prompted.
 
    - **Pneumonia_Detection_Training.ipynb**: 
      - This notebook contains details about the training process, including data preprocessing, model architecture, training, and evaluation.
@@ -78,7 +79,7 @@ In the project's files, you can find:
 
      - **How to Run**: 
          1. Open the notebook in Google Colab.
-         2. Run every cell in order.
+         2. Run the cells sequentially.
          3. After running all the cells, you should have the trained models in the `models_and_weights` folder, structured as follows:
 
          ```
