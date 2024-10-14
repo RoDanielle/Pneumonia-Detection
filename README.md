@@ -34,9 +34,9 @@ In the project's files, you can find:
      - This notebook contains details about the training process, including data preprocessing, model architecture, training, and evaluation.
      - **How to Set Up the Dataset for Training**:
        - Download the dataset from Kaggle. You can find it [here](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).
-       - Extract the downloaded files and rename the "chest_xray" folder to "all_the_images".
+       - Extract the downloaded files and rename the `chest_xray` folder to `all_the_images`.
        - Create a new folder named `project_ML` in `/content/drive/MyDrive/`.
-       - Upload the "all_the_images" folder into the `project_ML` folder in your Google Drive.
+       - Upload the `all_the_images` folder into the `project_ML` folder in your Google Drive.
 
          You should have the following structure:
 
@@ -79,7 +79,7 @@ In the project's files, you can find:
      - **How to Run**: 
          1. Open the notebook in Google Colab.
          2. Run every cell in order.
-         3. After running all the cells, you should have the trained models in the "models_and_weights" folder, structured as follows:
+         3. After running all the cells, you should have the trained models in the `models_and_weights` folder, structured as follows:
 
          ```
          content
