@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-**Authors:**
+**Author:**
 
 *   Danielle Rotem
-
-*   Shahar Loantz
-
-*   Yuval Hajbi
 
 **Description**:
 
