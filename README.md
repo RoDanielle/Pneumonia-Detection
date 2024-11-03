@@ -148,7 +148,7 @@ The trained models used for this project are included as a link to a Google Driv
 
 ![Original and Reconstructed Images from Anomaly Detection](Example_images/D_Reconstructed_Detection.jpg)
 
-### License
+## License
 This project is licensed under the MIT License. You are free to use, modify, and distribute this project, as long as the original license and attribution are retained. For more details, see the [LICENSE](LICENSE) file.
 
 ## Contributing
