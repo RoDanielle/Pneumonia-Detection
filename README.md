@@ -8,7 +8,7 @@ This project uses a deep convolutional neural network (CNN) to detect pneumonia 
 
 A deep convolutional neural network (CNN) is a type of artificial neural network specifically designed for processing structured grid data, such as images. CNNs use convolutional layers to automatically and adaptively learn spatial hierarchies of features from input images. This allows the network to recognize patterns, edges, textures, and higher-level features, making them highly effective for image classification and object detection tasks.
 
-### Dataset Distribution
+## Dataset Distribution
 
 - **Total Images**: 5863 JPEG chest X-ray images.
 - **Categories**: 
@@ -20,7 +20,7 @@ A deep convolutional neural network (CNN) is a type of artificial neural network
    - val: 1043 (Viral Pneumonia - 216, Bacterial Pneumonia - 559, Normal - 268)
    - test: 624 (Viral Pneumonia - 148, Bacterial Pneumonia - 242, Normal - 234)
 
-### How to Use
+## How to Use
 
 In the project's files, you can find:
 
@@ -111,7 +111,7 @@ In the project's files, you can find:
    - **pneumonia_detection_training.py**
    These files are in Python format for your convenience.
 
-### Models
+## Models
 
 This project includes several models for pneumonia detection and classification:
 
@@ -122,11 +122,11 @@ This project includes several models for pneumonia detection and classification:
    - **Multi-Class Model**: Classifies new images based on the multi-class classification model using KNN.
 4. **Anomaly Detection Model**: Uses an autoencoder to detect anomalies in the images.
 
-### Trained Models
+## Trained Models
 
 The trained models used for this project are included as a link to a Google Drive folder in the test notebook. You can use these models directly without retraining.
 
-### Results and Performance Examples
+## Results and Performance Examples
  
 **Confusion Matrix - Test Set A1 - Binary Class Classification**
 
@@ -147,3 +147,13 @@ The trained models used for this project are included as a link to a Google Driv
 **Original and Reconstructed Images from Anomaly Detection**
 
 ![Original and Reconstructed Images from Anomaly Detection](Example_images/D_Reconstructed_Detection.jpg)
+
+### License
+This project is licensed under the MIT License. You are free to use, modify, and distribute this project, as long as the original license and attribution are retained. For more details, see the [LICENSE](LICENSE) file.
+
+## Contributing
+Feel free to contribute by opening issues or creating pull requests.
+
+## Author
+This project was created and is maintained by [RoDanielle](https://github.com/RoDanielle).  
+For questions, feel free to reach out via GitHub.
